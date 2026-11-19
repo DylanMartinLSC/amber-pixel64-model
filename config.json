@@ -1,0 +1,42 @@
+{
+  "name": "amber-pixel64-v0.3",
+  "version": "0.3.0",
+  "weights_file": "amber-pixel64-v0.3.safetensors",
+  "architecture": {
+    "family": "dit-flow",
+    "resolution": 64,
+    "patch": 4,
+    "width": 512,
+    "depth": 8,
+    "heads": 8,
+    "text": {
+      "vocabulary_size": 10226,
+      "width": 384,
+      "depth": 6,
+      "length": 48
+    },
+    "augment_dim": 5,
+    "parameters": 91646768
+  },
+  "sampling": {
+    "steps": 100,
+    "guidance": 5.0,
+    "guidance_interval_t": [
+      0.2,
+      0.95
+    ],
+    "key_start": 0.99,
+    "key_frame_px": 6,
+    "transparency_key": "#ff00ff"
+  },
+  "training": {
+    "dataset": "AMBER Pixel64 (pixel64v4) train split",
+    "dataset_manifest_sha256": "ef1d71b70541d09169f3060d00012f1b98a4c72cc6e9f1dc2bd43d5b211b025c",
+    "initialisation": "random (no pretrained weights, no pretrained text encoder)",
+    "stage_1": "v0.3 from scratch, best unseen-artist validation at step 190,027 (EMA)",
+    "stage_2": "wind-down branch from stage 1, EMA at step 104,546 (picked by eye)",
+    "external_weights": [],
+    "synthetic_data": false
+  },
+  "source_checkpoint_sha256": "57a3c3d377b45bc1ec8880b85aee4dd71bb4d764af6c2d8ac57dabb4752ed8a8"
+}

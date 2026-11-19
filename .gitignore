@@ -1,0 +1,4 @@
+weights/*.safetensors
+sprites/
+__pycache__/
+*.pyc
